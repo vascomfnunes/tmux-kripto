@@ -1,7 +1,10 @@
 #!/usr/bin/env bash
 
-krypto_script="#($CWD/scripts/kripto.sh)"
-krypto_tag="\#{kripto}"
+CWD="$( cd "$( dirname "${BASH_SOURCE[0]}" )" && pwd )"
+source "$CWD/scripts/tmux.sh"
+
+kripto_script="#($CWD/scripts/kripto.sh)"
+kripto_tag="\#{kripto}"
 
 interpolate() {
   local interpolated="$1"

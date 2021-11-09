@@ -5,10 +5,10 @@
 CWD="$( cd "$( dirname "${BASH_SOURCE[0]}" )" && pwd )"
 source "$CWD/tmux.sh"
 
-CRYPTO_CURRENCY=$(get_tmux_option "$kripto_currency" "usd")
-CRYPTO_CURRENCY_SYMBOL=$(get_tmux_option "$kripto_currency_symbol" "$")
-CRYPTO_ID=$(get_tmux_option "$kripto_id" "bitcoin")
-CRYPTO_CACHE_SECONDS=$(get_tmux_option "$kripto_cache_seconds" "600")
+CRYPTO_CURRENCY=$(get_tmux_option @kripto_currency "usd")
+CRYPTO_CURRENCY_SYMBOL=$(get_tmux_option @kripto_currency_symbol "$")
+CRYPTO_ID=$(get_tmux_option @kripto_id "bitcoin")
+CRYPTO_CACHE_SECONDS=$(get_tmux_option @kripto_cache_seconds 600)
 
 cache_file=~/.tmux-kripto
 cache_ttl=$CRYPTO_CACHE_SECONDS

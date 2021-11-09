@@ -1,6 +1,6 @@
 # Kripto
 
-**kripto (Esperanto for crypto) is a simple plugin that displays the current market price of a specified crypto
+**Kripto (Esperanto for crypto) is a simple plugin that displays the current market price of a specified crypto
 currency in your Tmux status line.**
 
 Results are cached in `~/.tmux-kripto` for 10 minutes by default.
@@ -81,7 +81,7 @@ The plugin caches results by default to 10 minutes. You can set any other value 
 option:
 
 ```
-set -g @kripto_cache_seconds "900"
+set -g @kripto_cache_seconds 900
 ```
 
 The above command will cache results for 15 minutes.
