@@ -1,7 +1,7 @@
 #!/usr/bin/env bash
 
-crypto_script="#($CWD/scripts/kripto.sh)"
-crypto_tag="\#{kripto}"
+krypto_script="#($CWD/scripts/kripto.sh)"
+krypto_tag="\#{kripto}"
 
 interpolate() {
   local interpolated="$1"
