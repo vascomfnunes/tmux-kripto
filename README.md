@@ -89,4 +89,4 @@ The above command will cache results for 15 minutes.
 ## License
 
 This plugin is licensed under the MIT license. For more information please refer
-to the [LICENSE](https://github.com/vascomfnunes/tmux-clima/LICENSE) file.
+to the [LICENSE](https://github.com/vascomfnunes/tmux-kripto/blob/main/LICENSE) file.
