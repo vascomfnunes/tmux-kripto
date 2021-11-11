@@ -9,9 +9,17 @@ CRYPTO_CURRENCY=$(get_tmux_option @kripto_currency "usd")
 CRYPTO_CURRENCY_SYMBOL=$(get_tmux_option @kripto_currency_symbol "$")
 CRYPTO_ID=$(get_tmux_option @kripto_id "bitcoin")
 CRYPTO_CACHE_SECONDS=$(get_tmux_option @kripto_cache_seconds 600)
+CRYPTO_ICON=$(get_tmux_option @kripto_icon '¤ ')
+CRYPTO_ICON_HIDE=$(get_tmux_option @kripto_icon_hide 'false')
 
 cache_file=~/.tmux-kripto
 cache_ttl=$CRYPTO_CACHE_SECONDS
+
+if [[ $CRYPTO_ICON_HIDE == 'true' ]]; then
+    ICON=''
+else
+    ICON=$CRYPTO_ICON
+fi
 
 if [[ -f "$cache_file" ]]; then
     NOW=$(date +%s)
@@ -25,7 +33,7 @@ if [[ ! -f "$cache_file" ]]; then
     RESPONSE=$(curl --silent -X 'GET' https://api.coingecko.com/api/v3/coins/markets?vs_currency=${CRYPTO_CURRENCY}\&ids=${CRYPTO_ID})
 
     PRICE=$(echo "$RESPONSE" | jq '.[].current_price')
-    echo " ${PRICE}${CRYPTO_CURRENCY_SYMBOL}" >"$cache_file"
+    echo "${ICON}${PRICE}${CRYPTO_CURRENCY_SYMBOL}" >"$cache_file"
 fi
 
 cat "$cache_file"

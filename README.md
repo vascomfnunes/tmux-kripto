@@ -15,9 +15,6 @@ Results are cached in `~/.tmux-kripto` for 10 minutes by default.
 Make sure you have [Tmux Plugin Manager](https://github.com/tmux-plugins/tpm),
 [jq](https://stedolan.github.io/jq/download/) and [curl](https://curl.se/) installed.
 
-Also keep in mind that in order to correctly display the
-icon you will need to use a patched [Nerd Font](https://www.nerdfonts.com/).
-
 ## Install
 
 Then add the plugin to `~/.tmux.conf`:
@@ -75,6 +72,22 @@ set -g @kripto_currency_symbol "£"
 
 The above command will output the currency symbol for british pounds.
 
+### Currency symbol
+
+The plugin defaults to the unicode `¤`. You can set any other icon symbol using the following tmux option:
+
+```
+set -g @kripto_icon "💰"
+```
+
+The above command will prepend the cryptocurrency with the above icon.
+
+You can also hide the icon if you want to with:
+
+```
+set -g @kripto_icon_hide "true"
+```
+
 ### Cache timeout
 
 The plugin caches results by default to 10 minutes. You can set any other value in seconds using the following
@@ -89,4 +102,4 @@ The above command will cache results for 15 minutes.
 ## License
 
 This plugin is licensed under the MIT license. For more information please refer
-to the [LICENSE](https://github.com/vascomfnunes/tmux-kripto/blob/main/LICENSE) file.
+to the [LICENSE](https://github.com/vascomfnunes/tmux-clima/LICENSE) file.
