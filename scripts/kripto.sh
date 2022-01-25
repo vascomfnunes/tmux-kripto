@@ -8,12 +8,12 @@ source "$CWD/tmux.sh"
 CRYPTO_CURRENCY=$(get_tmux_option @kripto_currency "usd")
 CRYPTO_CURRENCY_SYMBOL=$(get_tmux_option @kripto_currency_symbol "$")
 CRYPTO_ID=$(get_tmux_option @kripto_id "bitcoin")
-CRYPTO_CACHE_SECONDS=$(get_tmux_option @kripto_cache_seconds 600)
+CRYPTO_TTL=$(get_tmux_option @kripto_ttl 600)
 CRYPTO_ICON=$(get_tmux_option @kripto_icon '¤ ')
 CRYPTO_ICON_HIDE=$(get_tmux_option @kripto_icon_hide 'false')
 
 cache_file=~/.tmux-kripto
-cache_ttl=$CRYPTO_CACHE_SECONDS
+cache_ttl=$CRYPTO_TTL
 
 if [[ $CRYPTO_ICON_HIDE == 'true' ]]; then
     ICON=''

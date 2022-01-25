@@ -1,7 +1,7 @@
 # Kripto
 
-**Kripto (Esperanto for crypto) is a simple plugin that displays the current market price of a specified crypto
-currency in your Tmux status line.**
+**Kripto (Esperanto for crypto) is a simple plugin that displays the current
+market price of a specified crypto currency in your Tmux status line.**
 
 Results are cached in `~/.tmux-kripto` for 10 minutes by default.
 
@@ -13,7 +13,8 @@ Results are cached in `~/.tmux-kripto` for 10 minutes by default.
 ### Other dependencies
 
 Make sure you have [Tmux Plugin Manager](https://github.com/tmux-plugins/tpm),
-[jq](https://stedolan.github.io/jq/download/) and [curl](https://curl.se/) installed.
+[jq](https://stedolan.github.io/jq/download/) and [curl](https://curl.se/)
+installed.
 
 ## Install
 
@@ -39,8 +40,8 @@ set -g status-right "#{kripto}"
 
 ### Cryptocurrency
 
-The plugin defaults to Bitcoin. You can set any other supported cryptocurrency using the following
-command:
+The plugin defaults to Bitcoin. You can set any other supported cryptocurrency
+using the following command:
 
 ```
 set -g @kripto_id "basic-attention-token"
@@ -50,7 +51,8 @@ The above command will use the Basic Attention Token cryptocurrency.
 
 ### Currency
 
-The plugin defaults to US dollars. You can set any other currency using the following
+The plugin defaults to US dollars. You can set any other currency using the
+following
 tmux command:
 
 ```
@@ -58,12 +60,14 @@ set -g @kripto_currency "gbp"
 ```
 
 **Reference to the Coingecko API
-documentation for all the available currencies and cryptocurrencies you can use with the above two options:
+documentation for all the available currencies and cryptocurrencies you can use
+with the above two options:
 [https://www.coingecko.com/en/api](https://www.coingecko.com/en/api).**
 
 ### Currency symbol
 
-The plugin defaults to `$`. You can set any other currency symbol using the following
+The plugin defaults to `$`. You can set any other currency symbol using the
+following
 tmux option:
 
 ```
@@ -74,7 +78,8 @@ The above command will output the currency symbol for british pounds.
 
 ### Currency symbol
 
-The plugin defaults to the unicode `¤`. You can set any other icon symbol using the following tmux option:
+The plugin defaults to the unicode `¤`. You can set any other icon symbol using
+the following tmux option:
 
 ```
 set -g @kripto_icon "💰"
@@ -88,13 +93,13 @@ You can also hide the icon if you want to with:
 set -g @kripto_icon_hide "true"
 ```
 
-### Cache timeout
+### Time-to-live (TTL)
 
-The plugin caches results by default to 10 minutes. You can set any other value in seconds using the following
-option:
+The plugin caches results by default for 10 minutes. You can set any other value
+(in seconds) using the following option:
 
 ```
-set -g @kripto_cache_seconds 900
+set -g @kripto_ttl 900
 ```
 
 The above command will cache results for 15 minutes.
