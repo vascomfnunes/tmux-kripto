@@ -1,5 +1,7 @@
 # Kripto
 
+![https://github.com/vascomfnunes/tmux-kripto/blob/main/media/img/shot.png](https://github.com/vascomfnunes/tmux-kripto/blob/main/media/img/shot.png)
+
 **Kripto (Esperanto for crypto) is a simple plugin that displays the current
 market price of a specified crypto currency in your Tmux status line.**
 
@@ -63,6 +65,15 @@ set -g @kripto_currency "gbp"
 documentation for all the available currencies and cryptocurrencies you can use
 with the above two options:
 [https://www.coingecko.com/en/api](https://www.coingecko.com/en/api).**
+
+### Rounding
+
+By default, the currency price is not rounded. You can round the currency stock
+price using:
+
+```
+set -g @krypto_round "true"
+```
 
 ### Currency symbol
 
